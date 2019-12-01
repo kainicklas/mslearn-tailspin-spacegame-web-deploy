@@ -131,7 +131,7 @@ stages:
               appName: '$(WebAppNameStaging)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
               
-stage: 'Production'
+- stage: 'Production'
   displayName: 'Deploy to the production environment'
   dependsOn: Staging
   jobs:
